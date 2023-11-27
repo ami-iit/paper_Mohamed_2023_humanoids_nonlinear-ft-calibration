@@ -52,6 +52,31 @@ mamba env create -f environment.yml
 
 It will install all the required dependencies (excluding MATLAB) in a conda environment called `ftnlcalib`.
 
+- From the repo top folder, create a build directory and move in it:
+
+```sh
+mkdir build && cd build
+```
+
+- Compile and install the code:
+
+```sh
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX="where-you-want-to-install"
+```
+
+Then:
+
+```sh
+make install
+```
+
+- Source bash file `<CMAKE_INSTALL_PREFIX>/share/humanoids_nonlinear_ft_calibration/setup.sh` in your `bashrc`
+
+```sh
+source <CMAKE_INSTALL_PREFIX>/share/humanoids_nonlinear_ft_calibration/setup.sh
+```
+
+This adds some environment variables needed by the MATLAB script to run properly.
 
 ### Usage
 
