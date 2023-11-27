@@ -6,7 +6,7 @@ clc
 
 type = 'armsFTs';
 locationURDF = getenv("FT_ARMS_URDF_MODELS_PATH");
-pathDatasets = [getenv("FT_DATASETS_PATH"), '/'];
+pathDatasets = [getenv("FT_PAPER_DATASETS_PATH"), '/'];
 
 consideredFixedJointsFTs = {'l_leg_ft_sensor';'r_leg_ft_sensor';'l_foot_front_ft_sensor';'r_foot_front_ft_sensor';'l_foot_rear_ft_sensor';'r_foot_rear_ft_sensor';'l_arm_ft_sensor';'r_arm_ft_sensor'}; % FT sensor names in the URDF
 contact_frames = {'root_link'};

@@ -58,7 +58,7 @@ At the moment, the above file structure need to built manually, as `YarpRobotLog
 ```matlab
 type = 'armsFTs';
 locationURDF = getenv("FT_ARMS_URDF_MODELS_PATH");
-pathDatasets = [getenv("FT_DATASETS_PATH"), 'datasets_iRonCub-Mk3-FT-ARMS/'];
+pathDatasets = [getenv("FT_PAPER_DATASETS_PATH"), 'datasets_iRonCub-Mk3-FT-ARMS/'];
 
 locationDataset_training   = [pathDatasets, 'Ex-2023-03-17_training/'];
 ```

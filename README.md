@@ -18,7 +18,7 @@ Hosameldin Awadalla Omer Mohamed, Gabriele Nava, Punith Reddy Vanteddu, Francesc
 </p>
 
 <div align="center">
-    Nonlinear In-situ Calibration of Strain-Gauge Force/Torque Sensors for Humanoid Robots
+    2023 IEEE-RAS International Conference on Humanoid Robots (Humanoids)
 </div>
 
 <div align="center">
@@ -77,6 +77,12 @@ source <CMAKE_INSTALL_PREFIX>/share/humanoids_nonlinear_ft_calibration/setup.sh
 ```
 
 This adds some environment variables needed by the MATLAB script to run properly.
+
+- Add the datasets to the specific location by running the command:
+
+```sh
+git clone https://huggingface.co/datasets/ami-iit/paper_Mohamed_2023_humanoids_nonlinear-ft-calibration_dataset $FT_PAPER_DATASETS_PATH
+```
 
 ### Usage
 
