@@ -29,11 +29,11 @@ Hosameldin Awadalla Omer Mohamed, Gabriele Nava, Punith Reddy Vanteddu, Francesc
 
 ### Installation
 
-This repository uses **MATLAB** (2021 and higher). The dependencies for running the code are:
+This repository uses **MATLAB** (`2021` and higher). The dependencies for running the code are:
 
-- [iDynTree](https://github.com/robotology/idyntree) along with the MATLAB bindings (v10.0.0).
-- [OSQP](https://doi.org/10.1007/s12532-020-00179-2) (v6.2.3).
-- [osqp-matlab-cmake-buildsystem](https://github.com/ami-iit/osqp-matlab-cmake-buildsystem) (v6.2.3).
+- [iDynTree](https://github.com/robotology/idyntree) along with the MATLAB bindings (`v10.0.0`).
+- [OSQP](https://doi.org/10.1007/s12532-020-00179-2) (`v6.2.3`).
+- [osqp-matlab-cmake-buildsystem](https://github.com/ami-iit/osqp-matlab-cmake-buildsystem) (`v6.2.3`).
 
 The dependencies can be easily installed using [conda](https://docs.conda.io/en/latest/) package manager. You can follow the following steps for installation
 
@@ -63,7 +63,7 @@ mamba activate ftnlcalib
 
 - Open MATLAB.
 - Browse to the repository.
-- Launch the script [`script`]().
+- Launch the script [`software/calibration_scripts/calib_leftArm.m`](./software/calibration_scripts/calib_leftArm.m).
 - The script will perform the following:
   * Parses the experiments' data from the stored datasets.
   * Computes the expected forces-torques measurements by the left-arm F/T sensor using the robot's [URDF](http://wiki.ros.org/urdf/XML/model) models and joints positions measurements.
