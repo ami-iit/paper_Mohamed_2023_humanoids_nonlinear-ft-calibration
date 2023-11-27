@@ -1,0 +1,7 @@
+name: ftnlcalib
+channels:
+  - robotology
+dependencies:
+  - idyntree=10.0.0
+  - idyntree-matlab-bindings=10.0.0
+  - osqp-matlab=0.6.2.3
