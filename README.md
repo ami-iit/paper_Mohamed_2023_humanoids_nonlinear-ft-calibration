@@ -21,6 +21,12 @@ Hosameldin Awadalla Omer Mohamed, Gabriele Nava, Punith Reddy Vanteddu, Francesc
     2023 IEEE-RAS International Conference on Humanoid Robots (Humanoids)
 </div>
 
+<p align="center">
+
+![lifting_configs](https://github.com/ami-iit/paper_Mohamed_2023_humanoids_nonlinear-ft-calibration/assets/45564317/383e31a8-e426-4688-a684-b8666c144ea7)
+
+</p>
+
 <div align="center">
   <a href="#installation"><b>Installation</b></a> |
   <b>Paper</b> |
@@ -29,7 +35,7 @@ Hosameldin Awadalla Omer Mohamed, Gabriele Nava, Punith Reddy Vanteddu, Francesc
 
 ### Installation
 
-This repository uses **MATLAB** (`2021` and higher). The dependencies for running the code are:
+This repository uses **MATLAB** (`2021a` and higher). The dependencies for running the code are:
 
 - [iDynTree](https://github.com/robotology/idyntree) along with the MATLAB bindings (`v10.0.0`).
 - [OSQP](https://doi.org/10.1007/s12532-020-00179-2) (`v6.2.3`).
