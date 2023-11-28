@@ -90,7 +90,7 @@ expValid_LeftArm.plotInOut();
 
 %% Run the prediction with all the identified models
 
-expValid_LeftArm.predictAllModels()
+expValid_LeftArm.predictAllModels(true)
 
 %% Plot validation results
 
