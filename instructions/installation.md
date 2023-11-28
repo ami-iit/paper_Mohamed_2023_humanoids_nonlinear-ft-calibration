@@ -1,4 +1,4 @@
-### Installation
+# Installation
 
 This repository uses **MATLAB** (`2021a` and higher). The dependencies for running the code are:
 
@@ -37,7 +37,7 @@ cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX="/path/to/desired/install/
 make install
 ```
 
-#### Windows
+### Windows
 
 ```sh
 cmake .. -G"Visual Studio 17 2022" -DCMAKE_INSTALL_PREFIX="\path\to\desired\install\dir"
@@ -52,7 +52,7 @@ source <CMAKE_INSTALL_PREFIX>/share/humanoids_nonlinear_ft_calibration/setup.sh
 
 This adds some environment variables needed by the MATLAB script to run properly.
 
-#### Windows
+### Windows
 
 Create the `setup.bat` file with the following content:
 

@@ -1,4 +1,4 @@
-### Usage
+# Usage
 
 1. Open a terminal, then activate the conda environment by running the command:
 
