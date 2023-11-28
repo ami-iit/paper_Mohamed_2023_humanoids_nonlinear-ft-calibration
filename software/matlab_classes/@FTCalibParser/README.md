@@ -39,7 +39,7 @@ At the moment, the above file structure need to built manually, as `YarpRobotLog
 
 ### URDF models
 
-- Currently, this repo contains [URDF files for `iRonCub-Mk3-FT-ARMS`](../../../../models/iRonCub-Mk3-FT-ARMS/iRonCub/robots/iRonCub-Mk3-FT-ARMS/) with various weights attached to left and right arms. They can be accessed using the environment variable `$FT_ARMS_URDF_MODELS_PATH`, after completing the [installation procedure](../../../../software-usage.md#procedure).
+- Currently, this repo contains [URDF files for `iRonCub-Mk3-FT-ARMS`](../../../../models/iRonCub-Mk3-FT-ARMS/iRonCub/robots/iRonCub-Mk3-FT-ARMS/) with various weights attached to left and right arms. They can be accessed using the environment variable `$FT_PAPER_URDF_MODELS_PATH`, after completing the [installation procedure](../../../../software-usage.md#procedure).
 
 - The URDF models in `iRonCub-Mk3-FT-ARMS` should have the following file name format: `model_l<x>kg-r<y>kg.urdf`, having `<x>`kg of weights on the left arm, and `<y>`kg of weights on the right arm.
 
@@ -57,7 +57,7 @@ At the moment, the above file structure need to built manually, as `YarpRobotLog
 
 ```matlab
 type = 'armsFTs';
-locationURDF = getenv("FT_ARMS_URDF_MODELS_PATH");
+locationURDF = getenv("FT_PAPER_URDF_MODELS_PATH");
 pathDatasets = [getenv("FT_PAPER_DATASETS_PATH"), 'datasets_iRonCub-Mk3-FT-ARMS/'];
 
 locationDataset_training   = [pathDatasets, 'Ex-2023-03-17_training/'];

@@ -5,7 +5,7 @@ clc
 %% Common configuration
 
 type = 'armsFTs';
-locationURDF = getenv("FT_ARMS_URDF_MODELS_PATH");
+locationURDF = getenv("FT_PAPER_URDF_MODELS_PATH");
 pathDatasets = [getenv("FT_PAPER_DATASETS_PATH"), '/'];
 
 consideredFixedJointsFTs = {'l_leg_ft_sensor';'r_leg_ft_sensor';'l_foot_front_ft_sensor';'r_foot_front_ft_sensor';'l_foot_rear_ft_sensor';'r_foot_rear_ft_sensor';'l_arm_ft_sensor';'r_arm_ft_sensor'}; % FT sensor names in the URDF
@@ -18,8 +18,8 @@ imu_link_name = 'imu_frame';
 
 %% Creating the data parsers
 
-locationDataset_training   = [pathDatasets, 'training_datasets/'];
-locationDataset_validation = [pathDatasets, 'validation_datasets/'];
+locationDataset_training   = [pathDatasets, 'training/'];
+locationDataset_validation = [pathDatasets, 'validation/'];
 
 parser_training = FTCalibParser(type, locationURDF, locationDataset_training);
 parser_training.configComputingExpectedValues(consideredFixedJointsFTs, contact_frames, use_velocity_and_acceleration, use_floating_base_kinematics, ft_ext_wrench_frames, fixed_link_name, imu_link_name)

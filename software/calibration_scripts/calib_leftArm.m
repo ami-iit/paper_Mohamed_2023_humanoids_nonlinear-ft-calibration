@@ -25,7 +25,7 @@ expTrain_LeftArm.FT.addModels(4);
 class_linear = struct('type', 'polynomial', 'np', 1, 'ny', 6, 'nu', 7, 'na', 0, 'nb', 0);
 expTrain_LeftArm.FT.Models(1).setModelClass(class_linear);
 expTrain_LeftArm.FT.Models(1).selectScaling(true);
-expTrain_LeftArm.FT.Models(1).modelClass.string = '6th_degree';
+expTrain_LeftArm.FT.Models(1).modelClass.string = '1st_degree';
 
 class_quad = struct('type', 'polynomial', 'np', 2, 'ny', 6, 'nu', 7, 'na', 0, 'nb', 0);
 expTrain_LeftArm.FT.Models(2).setModelClass(class_quad);

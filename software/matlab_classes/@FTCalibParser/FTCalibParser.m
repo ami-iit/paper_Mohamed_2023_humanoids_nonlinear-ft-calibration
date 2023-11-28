@@ -16,7 +16,7 @@ classdef FTCalibParser < handle
             %FTCALIBPARSER Construct an instance of this class
             arguments
                 givenExperimentType  char = 'armsFTs'
-                givenURDFLocation    char = getenv("FT_ARMS_URDF_MODELS_PATH")
+                givenURDFLocation    char = getenv("FT_PAPER_URDF_MODELS_PATH")
                 givenDatasetLocation char = getenv("HOME") 
             end
             obj.experimentType = givenExperimentType;
