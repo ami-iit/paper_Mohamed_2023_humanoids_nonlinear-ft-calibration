@@ -1,5 +1,6 @@
 name: ftnlcalib
 channels:
+  - conda-forge
   - robotology
 dependencies:
   - idyntree=10.0.0
