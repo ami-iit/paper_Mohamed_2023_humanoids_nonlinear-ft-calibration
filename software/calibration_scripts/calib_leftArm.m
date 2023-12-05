@@ -51,7 +51,7 @@ expTrain_LeftArm.FT.Models(5).modelClass.string = '5th_degree';
 
 %% Run the identification algorithm (call OSQP instances)
 
-expTrain_LeftArm.identifyFTModels('qp',0)
+expTrain_LeftArm.identifyFTModels('qp',0,true)
 
 %%
 
@@ -86,7 +86,7 @@ expValid_LeftArm.plotInOut();
 
 %% Run the prediction with all the identified models
 
-expValid_LeftArm.predictAllModels()
+expValid_LeftArm.predictAllModels(true)
 
 %% Plot validation results
 

@@ -1,6 +1,6 @@
 # Installation
 
-This repository uses **MATLAB** (`2021a` and higher). The dependencies for running the code are:
+This repository uses **MATLAB** (`2021a` and higher, with the [`Signal Processing Toolbox`](https://it.mathworks.com/products/signal.html) installed). The dependencies for running the code are:
 
 - [iDynTree](https://github.com/robotology/idyntree) along with the MATLAB bindings (`v10.0.0`).
 - [OSQP](https://doi.org/10.1007/s12532-020-00179-2) (`v6.2.3`).
