@@ -23,9 +23,9 @@ locationDataset_validation = [pathDatasets, 'validation/'];
 
 parser_training = FTCalibParser(type, locationURDF, locationDataset_training);
 parser_training.configComputingExpectedValues(consideredFixedJointsFTs, contact_frames, use_velocity_and_acceleration, use_floating_base_kinematics, ft_ext_wrench_frames, fixed_link_name, imu_link_name)
-parser_training.parseInputOutput()
+parser_training.parseInputOutput(true)
 
 parser_validation = FTCalibParser(type, locationURDF, locationDataset_validation);
 parser_validation.configComputingExpectedValues(consideredFixedJointsFTs, contact_frames, use_velocity_and_acceleration, use_floating_base_kinematics, ft_ext_wrench_frames, fixed_link_name, imu_link_name)
-parser_validation.parseInputOutput()
+parser_validation.parseInputOutput(true)
 

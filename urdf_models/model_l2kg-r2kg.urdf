@@ -378,8 +378,8 @@
   <link name="r_elbow_1">
     <inertial>
       <origin xyz="-0.01367742675489926 -0.024245058321733126 -0.12832049430850914" rpy="-0.12008540036084188 0.22978866753011018 -1.8533144378692001"/>
-      <mass value="0.347"/>
-      <inertia ixx="0.0018535873964912652" ixy="-0.00016997519122376544" ixz="0.0006717416523279385" iyy="0.002382435895556305" iyz="0.00021590014514213663" izz="0.0007060809623896606"/>
+      <mass value="0.750299"/>
+      <inertia ixx="0.00400791" ixy="-0.000367528" ixz="0.00145247" iyy="0.00515141" iyz="0.000466829" izz="0.00152672"/>
     </inertial>
     <visual>
       <origin xyz="0.020743191776066316 0.1391406172212523 0.21793478892057525" rpy="-0.12008540036084188 0.22978866753011018 -1.8533144378692001"/>
@@ -533,8 +533,8 @@
   <link name="l_elbow_1">
     <inertial>
       <origin xyz="-0.013602508633186405 0.024565909159768473 -0.1247868951225572" rpy="-0.12008543635729362 -0.22978873231718935 -1.2882780461440753"/>
-      <mass value="0.347"/>
-      <inertia ixx="0.0018202982470668652" ixy="0.0001665223808113544" ixz="-0.0006678623591681252" iyy="0.0023444878400702912" iyz="0.00021079408755261678" izz="0.0007008984747278105"/>
+      <mass value="0.712463"/>
+      <inertia ixx="0.00373745" ixy="0.000341905" ixz="-0.00137126" iyy="0.00481372" iyz="0.000432804" izz="0.00143909"/>
     </inertial>
     <visual>
       <origin xyz="0.020743217629961994 -0.13914059818467703 0.21793479861369477" rpy="-0.12008543635729362 -0.22978873231718935 -1.2882780461440753"/>
@@ -1406,33 +1406,6 @@
   <yarpRobotInterfaceConfigurationFile>model://iRonCub-Mk3-FT-ARMS/iRonCub/conf/iRonCub.xml</yarpRobotInterfaceConfigurationFile>
 </plugin>
 </gazebo>
-  <link name="l_bolt_in">
-  <visual>
-    <geometry>
-      <cylinder radius="0.018" length="0.0127"/>
-    </geometry>
-    <material name="blue">
-      <color rgba="0 0 .8 1"/>
-    </material>
-  </visual>
-  <collision>
-  <geometry>
-    <cylinder radius="0.06083" length="0.0183"/>
-  </geometry>
-  </collision>
-  <inertial>
-    <mass value="0.005"/>
-      <inertia ixx="6.4130104e-07" ixy="0.0" ixz="0.0" iyy=" 6.4130104e-07" iyz="0.0" izz="1.1360930e-6"/>
-    </inertial>
-</link>
-  <joint name="l_weight_fixed" type="fixed">
-    <origin xyz="0 0 0.00915" rpy="0 0 0"/>
-    <axis xyz="0 0 0"/>
-    <parent link="l_weights_origin"/>
-    <child link="l_bolt_in"/>
-    <limit effort="50000" lower="0.2617993877991494" upper="1.8500490071139892" velocity="50000"/>
-    <dynamics damping="1.0" friction="0.0"/>
-  </joint>
   <link name="l_weight_2a">
   <visual>
     <geometry>
@@ -1452,10 +1425,10 @@
    <inertia ixx="4.1910070e-03" ixy="0.0" ixz="0.0" iyy="4.1910060e-03" iyz="0.0" izz="7.9354930e-03"/>
   </inertial>
 </link>
-  <joint name="l_weight_stacked00" type="fixed">
-    <origin xyz="0 0 0.0183" rpy="0 0 0"/>
+  <joint name="l_weight_fixed" type="fixed">
+    <origin xyz="0 0 0.00915" rpy="0 0 0"/>
     <axis xyz="0 0 0"/>
-    <parent link="l_bolt_in"/>
+    <parent link="l_weights_origin"/>
     <child link="l_weight_2a"/>
     <limit effort="50000" lower="0.2617993877991494" upper="1.8500490071139892" velocity="50000"/>
     <dynamics damping="1.0" friction="0.0"/>
@@ -1487,33 +1460,6 @@
     <limit effort="50000" lower="0.2617993877991494" upper="1.8500490071139892" velocity="50000"/>
     <dynamics damping="1.0" friction="0.0"/>
   </joint>
-  <link name="r_bolt_in">
-  <visual>
-    <geometry>
-      <cylinder radius="0.018" length="0.0127"/>
-    </geometry>
-    <material name="blue">
-      <color rgba="0 0 .8 1"/>
-    </material>
-  </visual>
-  <collision>
-  <geometry>
-    <cylinder radius="0.06083" length="0.0183"/>
-  </geometry>
-  </collision>
-  <inertial>
-    <mass value="0.005"/>
-      <inertia ixx="6.4130104e-07" ixy="0.0" ixz="0.0" iyy=" 6.4130104e-07" iyz="0.0" izz="1.1360930e-6"/>
-    </inertial>
-</link>
-  <joint name="r_weight_fixed" type="fixed">
-    <origin xyz="0 0 0.00915" rpy="0 0 0"/>
-    <axis xyz="0 0 0"/>
-    <parent link="r_weights_origin"/>
-    <child link="r_bolt_in"/>
-    <limit effort="50000" lower="0.2617993877991494" upper="1.8500490071139892" velocity="50000"/>
-    <dynamics damping="1.0" friction="0.0"/>
-  </joint>
   <link name="r_weight_2a">
   <visual>
     <geometry>
@@ -1533,10 +1479,10 @@
    <inertia ixx="4.1910070e-03" ixy="0.0" ixz="0.0" iyy="4.1910060e-03" iyz="0.0" izz="7.9354930e-03"/>
   </inertial>
 </link>
-  <joint name="r_weight_stacked00" type="fixed">
-    <origin xyz="0 0 0.0183" rpy="0 0 0"/>
+  <joint name="r_weight_fixed" type="fixed">
+    <origin xyz="0 0 0.00915" rpy="0 0 0"/>
     <axis xyz="0 0 0"/>
-    <parent link="r_bolt_in"/>
+    <parent link="r_weights_origin"/>
     <child link="r_weight_2a"/>
     <limit effort="50000" lower="0.2617993877991494" upper="1.8500490071139892" velocity="50000"/>
     <dynamics damping="1.0" friction="0.0"/>

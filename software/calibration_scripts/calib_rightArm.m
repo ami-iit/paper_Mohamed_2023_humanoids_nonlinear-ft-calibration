@@ -57,9 +57,7 @@ expTrain_RightArm.identifyFTModels('qp',0,true)
 
 % Export the identified models as XML files
 storage_path = './1to5degree_qp_rightArm/';
-for k=1:5
-    expTrain_RightArm.FT.Models(k).exportModelXML(storage_path, [expTrain_RightArm.FT.Models(k).modelClass.string '.xml'])
-end
+expTrain_RightArm.FT.exportModelsXMLtoDir(storage_path)
 
 %% Plot training results
 
