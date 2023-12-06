@@ -59,9 +59,7 @@ nc = max(na,nb);
 
 % adding previous output data samples to the regression matrix
 for j=1:na
-    for l=1:ny
-        obj.A = [obj.A , y(nc-j+1:end-j,l)];
-    end
+    obj.A = [obj.A, y(nc-j+1:end-j,1:ny)];
 end
 
 for p=1:np
@@ -71,13 +69,11 @@ for p=1:np
     idx = unique(nchoosek(repelem(1:nu,p),p),'rows');
 
     for j=0:nb
-        for m=1:size(idx,1)
-            newCol = ones(N-nc,1);
-            for q=1:p
-                newCol = newCol .* u(nc-j+1:end-j,idx(m,q));
-            end
-            obj.A = [obj.A , newCol];
+        newCol = ones(N-nc,1);
+        for q = 1:p
+            newCol = newCol .* u(nc-j+1:end-j, idx(:,q));
         end
+        obj.A = [obj.A, newCol];
     end
 end
 
