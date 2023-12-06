@@ -46,20 +46,20 @@ if(strcmp(obj.modelClass.type, 'polynomial'))
     end
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    if(isempty(obj.A))
-        np = obj.modelClass.np;
-        ny = obj.modelClass.ny;
-        nu = obj.modelClass.nu;
-        na = obj.modelClass.na;
-        nb = obj.modelClass.nb;
+    np = obj.modelClass.np;
+    ny = obj.modelClass.ny;
+    nu = obj.modelClass.nu;
+    na = obj.modelClass.na;
+    nb = obj.modelClass.nb;
+    nc = max(na,nb);
 
+    if(isempty(obj.A))
         obj.buildRegressor(inputDataset,outputDataset, ...
                 np, ny, nu, na, nb);
     else
         disp('WARNING: Model prediction: Regressor exists. Using the same regressor!')
     end
 
-    nc = max(na,nb);
 
     y_hat = zeros(size(outputDataset));
     y_hat(nc+1:end,:) = obj.A .* obj.paramScaleVector' * obj.parameters;
