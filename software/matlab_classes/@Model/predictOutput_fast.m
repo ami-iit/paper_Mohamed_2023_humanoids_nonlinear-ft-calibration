@@ -53,12 +53,8 @@ if(strcmp(obj.modelClass.type, 'polynomial'))
     nb = obj.modelClass.nb;
     nc = max(na,nb);
 
-    if(isempty(obj.A))
-        obj.buildRegressor(inputDataset,outputDataset, ...
-                np, ny, nu, na, nb);
-    else
-        disp('WARNING: Model prediction: Regressor exists. Using the same regressor!')
-    end
+    obj.buildRegressor(inputDataset,outputDataset, ...
+            np, ny, nu, na, nb);
 
 
     y_hat = zeros(size(outputDataset));
