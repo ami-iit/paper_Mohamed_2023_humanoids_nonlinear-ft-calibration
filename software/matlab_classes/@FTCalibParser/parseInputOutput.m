@@ -69,9 +69,13 @@ for i=1:noOfDirs
 
             if(isempty(urdfFileName))
                 % model_l4kg-r4kg.urdf
-                urdfFileName = strcat("model_l", obj.dirStruct{i}(j).leftWeight,"kg-r", obj.dirStruct{i}(j).rightWeight,"kg.urdf");
+                usedURDFFileName = strcat("model_l", obj.dirStruct{i}(j).leftWeight,"kg-r", obj.dirStruct{i}(j).rightWeight,"kg.urdf");
+            else
+                usedURDFFileName = urdfFileName;
             end
-            pathURDFModel = convertStringsToChars(strcat(obj.locationURDFModel, urdfFileName));
+
+            pathURDFModel = convertStringsToChars(strcat(obj.locationURDFModel, usedURDFFileName));
+            disp(['[parseInputOutput] pathURDFModel: ' pathURDFModel])
 
             if(isfile(pathURDFModel))
                 obj.dirStruct{i}(j).expectedValues = obj.computeExpectedValues(robot_logger_device, pathURDFModel);
