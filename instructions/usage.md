@@ -19,6 +19,15 @@ mamba activate ftnlcalib
 The script will perform the following:
   * Parses the experiments' data from the stored datasets.
   * Computes the expected forces-torques measurements by the right-arm F/T sensor using the robot's [URDF](http://wiki.ros.org/urdf/XML/model) models and joints positions measurements.
+
+> [!NOTE]
+> To save time, the current dataset already contains the computed expected forces-torques values. If you want to re-compute them, please modify [this line](../software/calibration_scripts/parse_data.m#L26) and [this line](../software/calibration_scripts/parse_data.m#L30) to
+> 
+> ```matlab
+> parser_training.parseInputOutput(true)
+> parser_validation.parseInputOutput(true)
+> ```
+
   * Builds polynomial models for calibrating the right-arm F/T sensor.
   * Uses the F/T sensor's expected and actual measurements as input and output datasets to estimate the coefficients of the built models.
   * Computes the values of the coefficients of the models using `OSQP`.

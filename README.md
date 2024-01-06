@@ -29,8 +29,7 @@ Hosameldin Awadalla Omer Mohamed, Gabriele Nava, Punith Reddy Vanteddu, Francesc
 
 <div align="center">
   <a href="#installation"><b>Installation</b></a> |
-  <b>Paper</b> |
-  <b>Video</b>
+  <a href="https://arxiv.org/abs/2312.09846"><b>Paper</b></a>
 </div>
 
 
