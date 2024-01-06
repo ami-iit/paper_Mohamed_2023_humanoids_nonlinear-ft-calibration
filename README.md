@@ -23,7 +23,7 @@ Hosameldin Awadalla Omer Mohamed, Gabriele Nava, Punith Reddy Vanteddu, Francesc
 
 <p align="center">
 
-![lifting_configs](https://github.com/ami-iit/paper_Mohamed_2023_humanoids_nonlinear-ft-calibration/assets/45564317/383e31a8-e426-4688-a684-b8666c144ea7)
+https://github.com/ami-iit/paper_Mohamed_2023_humanoids_nonlinear-ft-calibration/assets/45564317/ac0b5dbe-34fa-4fa9-8669-35a3c7fdd767
 
 </p>
 
