@@ -91,15 +91,15 @@ for k = 1:length(obj.FT.Models)
     valRMSEForce(k) = sqrt(mean((normExpectedForce-normMeasuredForce).^2));
     valRMSETorque(k) = sqrt(mean((normExpectedTorque-normMeasuredTorque).^2));
 end
-valRMSEForce = strcat(', RMSE= ', cellstr(string(valRMSEForce)));
-valRMSETorque = strcat(', RMSE= ', cellstr(string(valRMSETorque)));
+valRMSEForce = strcat(', RMSE= ', cellstr(string(round(valRMSEForce*100)/100)));
+valRMSETorque = strcat(', RMSE= ', cellstr(string(round(valRMSETorque*100)/100)));
 
 subplot(2,1,1)
 grid
 xlabel('Time [s]')
 ylabel('Force [N]')
 % add RMSE to the legend
-legend(strcat(tempLegendText, [cell(1);valRMSEForce]), 'Interpreter', 'none', 'Location', 'northwest')
+legend(strcat(tempLegendText, [cell(1);valRMSEForce]), 'Interpreter', 'none', 'Location', 'best')
 %legend(strcat(tempLegendText, ' '), 'Interpreter', 'none', 'Location', 'best')
 title('Force Norm')
 
@@ -108,7 +108,7 @@ grid
 xlabel('Time [s]')
 ylabel('Torque [Nm]')
 % add RMSE to the legend
-legend(strcat(tempLegendText, [cell(1);valRMSETorque]), 'Interpreter', 'none', 'Location', 'northwest')
+legend(strcat(tempLegendText, [cell(1);valRMSETorque]), 'Interpreter', 'none', 'Location', 'best')
 %legend(strcat(tempLegendText, ' '), 'Interpreter', 'none', 'Location', 'best')
 title('Torque Norm')
 

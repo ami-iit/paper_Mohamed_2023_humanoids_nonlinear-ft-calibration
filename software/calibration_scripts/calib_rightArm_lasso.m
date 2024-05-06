@@ -67,9 +67,9 @@ expTrain_RightArm.FT.exportModelsXMLtoDir(storage_path);
 
 %% Plot training results
 
-expTrain_RightArm.plotAll('BestFit');
+expTrain_RightArm.plotAll('RMSE');
 
-expTrain_RightArm.plotAllError('BestFit');
+expTrain_RightArm.plotAllError('RMSE');
 
 expTrain_RightArm.plotAllNorm();
 
@@ -79,7 +79,7 @@ expTrain_RightArm.plotAllNorm();
 expValid_RightArm = Experiment;
 
 % Add parsed data
-expValid_RightArm.appendDataFromParser(parser_validation, 'l_arm_ft_sensor');
+expValid_RightArm.appendDataFromParser(parser_validation, 'r_arm_ft_sensor');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -94,9 +94,18 @@ expValid_RightArm.predictAllModels(true)
 
 %% Plot validation results
 
-expValid_RightArm.plotAll('BestFit');
+expValid_RightArm.plotAll('RMSE');
+widthTH = 35;
+heightTH = 35;
+saveF('results_validation_rightArm_lambdas.eps',[widthTH heightTH])
 
-expValid_RightArm.plotAllError('BestFit');
+expValid_RightArm.plotAllError('RMSE');
+widthTH = 25;
+heightTH = 30;
+saveF('results_validation_error_rightArm_lambdas.eps',[widthTH heightTH])
 
 expValid_RightArm.plotAllNorm();
+widthTH = 25;
+heightTH = 20;
+saveF('results_validation_norm_rightArm_lambdas.eps',[widthTH heightTH])
 

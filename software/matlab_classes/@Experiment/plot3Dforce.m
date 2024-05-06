@@ -20,7 +20,6 @@ xlabel('Force X [N]')
 ylabel('Force Y [N]')
 zlabel('Force Z [N]')
 %legend('F/T sensor meas.', 'Expected meas.')
-legend('Expected meas.')
 
 
 end
