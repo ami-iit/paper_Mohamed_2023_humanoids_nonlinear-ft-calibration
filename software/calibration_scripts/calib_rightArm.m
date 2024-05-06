@@ -61,9 +61,9 @@ expTrain_RightArm.FT.exportModelsXMLtoDir(storage_path)
 
 %% Plot training results
 
-expTrain_RightArm.plotAll('BestFit');
+expTrain_RightArm.plotAll('RMSE');
 
-expTrain_RightArm.plotAllError('BestFit');
+expTrain_RightArm.plotAllError('RMSE');
 
 expTrain_RightArm.plotAllNorm();
 
@@ -88,9 +88,18 @@ expValid_RightArm.predictAllModels(true)
 
 %%
 
-expValid_RightArm.plotAll('BestFit');
+expValid_RightArm.plotAll('RMSE');
+widthTH = 35;
+heightTH = 35;
+saveF('results_validation_rightArm.eps',[widthTH heightTH])
 
-expValid_RightArm.plotAllError('BestFit');
+expValid_RightArm.plotAllError('RMSE');
+widthTH = 25;
+heightTH = 30;
+saveF('results_validation_error_rightArm.eps',[widthTH heightTH])
 
 expValid_RightArm.plotAllNorm();
+widthTH = 25;
+heightTH = 20;
+saveF('results_validation_norm_rightArm.eps',[widthTH heightTH])
 

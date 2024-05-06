@@ -16,11 +16,11 @@ outputData = parser_training.dirStruct{6}(1).expectedValues.FTs.r_arm_ft_sensor.
 
 expGrid = Experiment;
 expGrid.appendData(inputTime, inputData, outputTime, outputData);
-expGrid.plot3DforceAndTorque()
+expGrid.plot3Dforce()
 
 %%
-widthTH = 12;
-heightTH = 7;
+widthTH = 20;
+heightTH = 15;
 saveF('grid_traj.eps',[widthTH heightTH])
 
 
@@ -61,8 +61,8 @@ legend('No load', '5kg load', '7kg load', '10kg load', 'Location','northeast')
 
 
 %%
-widthTH = 12;
-heightTH = 7;
+widthTH = 20;
+heightTH = 15;
 saveF('grid_traj_multiple_loads.eps',[widthTH heightTH])
 
 
@@ -99,8 +99,8 @@ legend('around 25°C', 'around 37°C', 'around 43°C', 'Location','northeast')
 
 %%
 
-widthTH = 12;
-heightTH = 7;
+widthTH = 20;
+heightTH = 15;
 saveF('temperature_effect.eps',[widthTH heightTH])
 
 %% Plot full trajectory
@@ -170,8 +170,8 @@ legend('No load', 'No load', '5kg load', ...
 
 
 %%
-widthTH = 14;
-heightTH = 9;
+widthTH = 20;
+heightTH = 15;
 saveF('full_traj_forces.eps',[widthTH heightTH])
 
 %% Plot full trajectory - TORQUES
@@ -238,6 +238,6 @@ legend('No load', 'No load', '5kg load', ...
     '7kg load', '10kg load', 'Location','northeast')
 
 %%
-widthTH = 12;
-heightTH = 7;
+widthTH = 20;
+heightTH = 15;
 saveF('full_traj_torques.eps',[widthTH heightTH])

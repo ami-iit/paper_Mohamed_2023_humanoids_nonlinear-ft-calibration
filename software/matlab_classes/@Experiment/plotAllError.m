@@ -48,9 +48,9 @@ end
 % convert RMSE matrix to string cell array
 switch performanceCriteria
     case 'RMSE'
-        tempCriteriaMatrix = strcat(', RMSE= ', cellstr(string(tempCriteriaMatrix)));
+        tempCriteriaMatrix = strcat(', RMSE= ', cellstr(string(round(tempCriteriaMatrix*100)/100)));
     case 'BestFit'
-        tempCriteriaMatrix = strcat(', BestFit= ', cellstr(string(tempCriteriaMatrix)), ' %');
+        tempCriteriaMatrix = strcat(', BestFit= ', cellstr(string(round(tempCriteriaMatrix*100)/100)), ' %');
 end
 subPlotsTitles = {'Fx', 'Fy', 'Fz', 'Tx', 'Ty', 'Tz'};
 subPlotsYLables = {'Force [N]', 'Force [N]', 'Force [N]', 'Torque [N.m]', 'Torque [N.m]', 'Torque [N.m]'};
